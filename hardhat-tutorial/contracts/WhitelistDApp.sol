@@ -10,8 +10,8 @@ contract WhitelistDapp{
     // if an address is whitelisted, we would set it to true, it is false by default for all other addresses.
     mapping(address => bool) public whitelistedAddresses;
 
-    // numOfAddressesWhitelisted would be used to keep track of how many addresses have been whitelisted
-    uint8 public numOfAddressesWhitelisted;
+    // numAddressesWhitelisted would be used to keep track of how many addresses have been whitelisted
+    uint8 public numAddressesWhitelisted;
 
     // Setting the Max number of whitelisted addresses
     // User will put the value at the time of deployment
@@ -28,13 +28,13 @@ contract WhitelistDapp{
         require(!whitelistedAddresses[msg.sender], "Address has already been whitelisted");
         
         // check if the numOfAddressesWhitelisted < maxWhitelistedAddresses, if not then throw an error.
-        require(numOfAddressesWhitelisted < maxWhitelistedAddresses, "Limit reached, more addresses can't be whitelisted!");
+        require(numAddressesWhitelisted < maxWhitelistedAddresses, "Limit reached, more addresses can't be whitelisted!");
         
         // Add the address which called the function to the whitelistedAddress array
         whitelistedAddresses[msg.sender] = true;
         
         // Increase the number of whitelisted addresses
-        numOfAddressesWhitelisted += 1;
+        numAddressesWhitelisted += 1;
     }
 
 
