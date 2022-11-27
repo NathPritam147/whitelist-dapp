@@ -1,0 +1,6 @@
+[submodule "hardhat-tutorial"]
+	path = hardhat-tutorial
+	url = ./hardhat-tutorial/
+[submodule "whitelist-app"]
+	path = whitelist-app
+	url = ./whitelist-app/
