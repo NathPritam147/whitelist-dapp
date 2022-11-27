@@ -1,6 +1,0 @@
-[submodule "hardhat-tutorial"]
-	path = hardhat-tutorial
-	url = "https://github.com/NathPritam147/hardhat-tutorial.git"
-[submodule "whitelist-app"]
-	path = whitelist-app
-	url = "https://github.com/NathPritam147/whitelist-app.git"
